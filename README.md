@@ -14,19 +14,23 @@ Assurez-vous d'avoir les éléments suivants installés sur votre système :
 Téléchargement
 
 
-git clone https://github.com/votreutilisateur/othello-game-c.git
+    git clone https://github.com/votreutilisateur/othello-game-c.git
 
-cd othello-game-c
+    cd othello-game-c
 
 Compilation
 
 
-gcc -o othello main.c -lSDL -lSDL_image -lSDL_ttf
+    gcc -o othello main.c -lSDL -lSDL_image -lSDL_ttf
+ou
+    make
 
 Exécution
 
 
-./othello
+    ./othello
+ou 
+    ./main
 
 Options de Jeu
 
