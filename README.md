@@ -1,10 +1,60 @@
-<<<<<<< HEAD
+
 # Othello_Game
-Ce projet est une implémentation du jeu Othello (aussi connu sous le nom de Reversi) en C, conçu pour être exécuté sous un environnement Linux. Le jeu est développé en utilisant la bibliothèque SDL2 pour les graphiques. 
+Ce projet est une implémentation du jeu Othello (aussi connu sous le nom de Reversi) en C, conçu pour être exécuté sous un environnement Linux. Le jeu est développé en utilisant la bibliothèque SDL pour les graphiques. 
 =======
 
-#Jeu Othello
-Une version graphique du célèbre jeu « Othello » développée en utilisant la SDL et le langage C sur la plateforme Linux.
+Prérequis
+
+Assurez-vous d'avoir les éléments suivants installés sur votre système :
+
+    GCC : Le compilateur C pour la compilation du code.
+    Git : Pour cloner le référentiel depuis GitHub.
+    SDL (optionnel) : Bibliothèque utilisée pour les fonctionnalités graphiques.
+
+Téléchargement
+
+bash
+
+git clone https://github.com/votreutilisateur/othello-game-c.git
+cd othello-game-c
+
+Compilation
+
+bash
+
+gcc -o othello main.c -lSDL -lSDL_image -lSDL_ttf
+
+Exécution
+
+bash
+
+./othello
+
+Options de Jeu
+
+    Suivez les instructions affichées à l'écran pour jouer au jeu Othello.
+    Utilisez les commandes spécifiées pour effectuer vos mouvements.
+
+Fonctionnalités
+
+    Console : Le jeu est conçu pour être joué en mode console.
+    Graphiques (optionnel) : Si la bibliothèque SDL2 est installée, le jeu peut inclure des fonctionnalités graphiques.
+
+Remarques
+
+    Assurez-vous de compiler avec la bibliothèque mathématique si nécessaire (-lm).
+    Pour les fonctionnalités graphiques, assurez-vous d'avoir SDL2 installé sur votre système.
+
+Contributeurs
+
+    Votre Nom
+
+Licence
+
+Ce projet est sous licence MIT.
+
+
+
 
 Remarques :
 
@@ -18,5 +68,7 @@ Remarques :
 
 5)	Je suis convaincu que ces algorithmes peuvent être implémentés de manière plus optimale. N’hésitez pas à me contacter par e-mail à <sony-dilane-level.mbango@isen.yncrea.fr> 
 
-6)	J’espère que ce projet vous aidera à créer votre propre version du jeu <Othello> sur la plateforme Linux.
->>>>>>> 8f95d7a (1Er)
+
+![Alt text](menu.jpg)
+
+
