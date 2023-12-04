@@ -23,13 +23,15 @@ Compilation
 
     gcc -o othello main.c -lSDL -lSDL_image -lSDL_ttf
 ou
+
     make
 
 Exécution
 
 
     ./othello
-ou 
+ou
+
     ./main
 
 Options de Jeu
