@@ -9,24 +9,22 @@ Assurez-vous d'avoir les éléments suivants installés sur votre système :
 
     GCC : Le compilateur C pour la compilation du code.
     Git : Pour cloner le référentiel depuis GitHub.
-    SDL (optionnel) : Bibliothèque utilisée pour les fonctionnalités graphiques.
+    SDL (Important) : Bibliothèque utilisée pour les fonctionnalités graphiques.
 
 Téléchargement
 
-bash
 
 git clone https://github.com/votreutilisateur/othello-game-c.git
+
 cd othello-game-c
 
 Compilation
 
-bash
 
 gcc -o othello main.c -lSDL -lSDL_image -lSDL_ttf
 
 Exécution
 
-bash
 
 ./othello
 
@@ -47,7 +45,9 @@ Remarques
 
 Contributeurs
 
-    Votre Nom
+    -Level sony
+    -kevin takam
+    -zachee njila
 
 Licence
 
@@ -68,7 +68,8 @@ Remarques :
 
 5)	Je suis convaincu que ces algorithmes peuvent être implémentés de manière plus optimale. N’hésitez pas à me contacter par e-mail à <sony-dilane-level.mbango@isen.yncrea.fr> 
 
+![Alt text](menu2.jpg)
 
-![Alt text](menu.jpg)
+
 
 
