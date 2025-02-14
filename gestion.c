@@ -1,8 +1,8 @@
 /*
     Nom du fichier : gestion.c
     Auteur         : Level MBANGO , Fanck TAKAM , Zachee NJILA 
-    Date           : 20/04/2023
-    Role           : contient les fonctions qui gèrent le tableau "grille" après le début d'une partie ainsi que les bots
+    Date           : 20/04/2023 
+    Role           : contient les fonctions qui gÃ¨rent le tableau "grille" aprÃ¨s le dÃ©but d'une partie ainsi que les bots
 
 */
 
@@ -28,11 +28,11 @@ void initialiser_grille(int grille[][8]) //initialiser la grille
     grille[4][d]=NOIR;
     grille[4][e]=BLANC;
 }
-int case_existe (int ligne,int colonne) //vérifier si les coordonnées sont dans la grille
+int case_existe (int ligne,int colonne) //vÃ©rifier si les coordonnÃ©es sont dans la grille
 {
     return ((colonne >= 0) && (colonne < 8) && (ligne >= 0) && (ligne < 8));
 }
-int coup_valide(int grille[8][8],int ligne,int colonne,int joueur) //vérifier si le coup est valide ou non
+int coup_valide(int grille[8][8],int ligne,int colonne,int joueur) //vÃ©rifier si le coup est valide ou non
 {
     int i, j, trouver;
     int caractere_joueur, caractere_adversaire;
@@ -319,7 +319,7 @@ void nettoyer_grille(int grille[][8])
     }
 }
 
-int Partie_terminee(int grille[8][8]) // s'il y a encore de coup valide à jouer cette fonction envoit 1 sinon elle envoit 0
+int Partie_terminee(int grille[8][8]) // s'il y a encore de coup valide Ã  jouer cette fonction envoit 1 sinon elle envoit 0
 {
     int valide=1;
     for(int i=0; i<8; i++)
@@ -410,10 +410,10 @@ coup bot(int grille[][8],int couleur,int difficulte)
             break;        
     }
 }
-coup bot_facile(int grille[][8],int couleur) // ce bot cherche de jouer un coup à l'interieur de la grille(il ne capture pas les extrémités: les lignes et les colonnes extérieures) sinon il cherche un coup possible
+coup bot_facile(int grille[][8],int couleur) // ce bot cherche de jouer un coup Ã  l'interieur de la grille(il ne capture pas les extrÃ©mitÃ©s: les lignes et les colonnes extÃ©rieures) sinon il cherche un coup possible
 {
     coup bot;
-    for(int i=1; i<=6; i++) //chercher de jouer un coup à l'interieur de la grille
+    for(int i=1; i<=6; i++) //chercher de jouer un coup Ã  l'interieur de la grille
     {
         for(int j=b; j<g; j++)
         {
@@ -425,7 +425,7 @@ coup bot_facile(int grille[][8],int couleur) // ce bot cherche de jouer un coup 
             }
         }
     }
-    // s'il ne trouve pas un coup possible à l'interieur
+    // s'il ne trouve pas un coup possible Ã  l'interieur
     for(int j=a; j<=h; j++)
     {
         if(coup_valide(grille,0,j,couleur))
@@ -458,10 +458,10 @@ coup bot_facile(int grille[][8],int couleur) // ce bot cherche de jouer un coup 
     }
 }
 
-coup bot_moyen(int grille[][8],int couleur) //ce bot cherche de capturer les extrémités et de ne pas jouer si possible un coup qui vous aidera de les capturer
+coup bot_moyen(int grille[][8],int couleur) //ce bot cherche de capturer les extrÃ©mitÃ©s et de ne pas jouer si possible un coup qui vous aidera de les capturer
 {
     coup bot;
-    //vérifier s'il est possible de jouer un coup en (1,a) , (1,h) , (8,a) , (8,h)
+    //vÃ©rifier s'il est possible de jouer un coup en (1,a) , (1,h) , (8,a) , (8,h)
     if(coup_valide(grille,0,a,couleur))
     {
          bot.x=0;
@@ -487,7 +487,7 @@ coup bot_moyen(int grille[][8],int couleur) //ce bot cherche de capturer les ext
          return bot;
     }
 
-    //sinon chercher à jouer un coup en extrémités
+    //sinon chercher Ã  jouer un coup en extrÃ©mitÃ©s
     for(int j=b; j<h; j++)
     {
         if(coup_valide(grille,0,j,couleur))
@@ -518,7 +518,7 @@ coup bot_moyen(int grille[][8],int couleur) //ce bot cherche de capturer les ext
             return bot;
         }
     }
-    //sinon jouer un coup à l'intérieur(la colonne c,f et la ligne 3,6)
+    //sinon jouer un coup Ã  l'intÃ©rieur(la colonne c,f et la ligne 3,6)
     for(int j=c;j<=f;j++)
     {
         if(coup_valide(grille,2,j,couleur))
@@ -611,7 +611,7 @@ int evaluer_gain(int grille[8][8], int ligne, int colonne, int joueur)
 {
     int gain = 0;
 
-    // Déterminer le caractère du joueur et de l'adversaire
+    // DÃ©terminer le caractÃ¨re du joueur et de l'adversaire
     int caractere_joueur, caractere_adversaire;
     if (joueur == BLANC)
     {
@@ -624,7 +624,7 @@ int evaluer_gain(int grille[8][8], int ligne, int colonne, int joueur)
         caractere_adversaire = BLANC;
     }
 
-    // Évaluer le gain potentiel pour chaque direction
+    // Ã‰valuer le gain potentiel pour chaque direction
     int directions[8][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
 
     for (int i = 0; i < 8; i++)
@@ -695,7 +695,7 @@ coup bot_Difficile(int grille[8][8], int couleur)
         return passer;
     }
 
-    // Évaluer les gains potentiels pour chaque coup valide
+    // Ã‰valuer les gains potentiels pour chaque coup valide
     int gains_potentiels[64];
 
     for (int k = 0; k < nb_coups_valides; k++)
